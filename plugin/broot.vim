@@ -5,9 +5,9 @@ let s:broot_nvim_config_path = fnamemodify(s:broot_default_config_path, ':h') . 
 let s:broot_config_path = s:broot_default_config_path . ';' . s:broot_nvim_config_path
 
 function! s:brootCallback(code, cmd) abort
-  if a:code == 0
-    silent! Bclose!
-  endif
+  "if a:code == 0
+  "  silent! Bclose!
+  "endif
   try
     if filereadable(s:out_file_path)
       for f in readfile(s:out_file_path)
